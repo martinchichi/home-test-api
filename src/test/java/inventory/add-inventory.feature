@@ -28,3 +28,9 @@ Feature: Add inventory items
     When method post
     Then status 400
     And match response == 'Not all requirements are met'
+
+  Scenario: Validate recently added item is present in the inventory
+    Given path 'inventory'
+    When method get
+    Then status 200
+    And match response.data contains hawaiian
