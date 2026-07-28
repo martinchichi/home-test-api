@@ -4,5 +4,11 @@
     "name": "Baked Rolls x 8",
     "image": "roll.png",
     "price": "$10"
+  },
+  "hawaiian": {
+    "id": "10",
+    "name": "Hawaiian",
+    "image": "hawaiian.png",
+    "price": "$14"
   }
 }
