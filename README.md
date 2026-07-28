@@ -44,10 +44,8 @@ home-test-api
         └── java
             ├── karate-config.js
             └── inventory
-                ├── InventoryTest.java
+                ├── inventoryTest.java
                 ├── add-inventory.feature
-                ├── filter-inventory.feature
-                ├── get-inventory.feature
                 └── data
                     └── inventory-items.json
 ```
@@ -295,9 +293,8 @@ docker rm -f demo-app
 
 The scenarios are grouped by inventory operation:
 
-* `get-inventory.feature`
-* `filter-inventory.feature`
-* `add-inventory.feature`
+- `inventory.feature`: inventory retrieval and filtering scenarios.
+- `add-inventory.feature`: inventory creation, validation, and duplicate scenarios.
 
 This keeps related scenarios together without creating one file for every individual test case.
 
