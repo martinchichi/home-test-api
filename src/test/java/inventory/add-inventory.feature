@@ -18,3 +18,13 @@ Feature: Add inventory items
     When method post
     Then status 400
     And match response == 'Bad Request'
+
+  Scenario: Try to add item with missing information
+    * def incompleteHawaiian = karate.toJson(hawaiian)
+    * remove incompleteHawaiian.id
+
+    Given path 'inventory', 'add'
+    And request incompleteHawaiian
+    When method post
+    Then status 400
+    And match response == 'Not all requirements are met'
